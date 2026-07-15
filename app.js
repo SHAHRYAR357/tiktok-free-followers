@@ -16,7 +16,7 @@ const products = [
   {
     id: "watch-001",
     name: "Free Unlimited Views",
-    price: 2500,
+    price: 100,
     description: "Get free tiktok views.",
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQurNLwwRpqAMDRaRA42QOH8k-GPOsyP0Ugbm33j4LByVNhIx_vdd0YDXU&s=10"
   },

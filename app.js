@@ -180,11 +180,11 @@ orderForm.addEventListener("submit", async (event) => {
     orderModal.close();
     showDiscountPopup(nextOrderDiscount);
   } catch (error) {
-    showMessage("Order save nahi hua. Firebase rules/config check karen.", "error");
+    showMessage("Try Again. Firebase rules/config check karen.", "error");
     console.error(error);
   } finally {
     submitOrder.disabled = false;
-    submitOrder.textContent = "Order Send Karen";
+    submitOrder.textContent = "Confirm Order";
   }
 });
 

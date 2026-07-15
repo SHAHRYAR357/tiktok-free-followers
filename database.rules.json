@@ -1,0 +1,11 @@
+{
+  "rules": {
+    "orders": {
+      ".read": false,
+      "$orderId": {
+        ".write": "newData.exists() && !data.exists()",
+        ".validate": "newData.hasChildren(['productId', 'productName', 'productPrice', 'customerName', 'customerPhone', 'nextOrderDiscount', 'status', 'createdAt']) && newData.child('productId').isString() && newData.child('productName').isString() && newData.child('productPrice').isNumber() && newData.child('customerName').isString() && newData.child('customerName').val().length >= 2 && newData.child('customerName').val().length <= 60 && newData.child('customerPhone').isString() && newData.child('customerPhone').val().length >= 1 && newData.child('nextOrderDiscount').isNumber() && (newData.child('nextOrderDiscount').val() === 500 || newData.child('nextOrderDiscount').val() === 1000 || newData.child('nextOrderDiscount').val() === 1500 || newData.child('nextOrderDiscount').val() === 2000) && newData.child('status').val() === 'new' && newData.child('createdAt').isString()"
+      }
+    }
+  }
+}

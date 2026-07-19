@@ -16,28 +16,28 @@ const products = [
   {
     id: "watch-001",
     name: "Free Unlimited Views",
-    price: 100,
+    price: 2500,
     description: "Get free tiktok views.",
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQurNLwwRpqAMDRaRA42QOH8k-GPOsyP0Ugbm33j4LByVNhIx_vdd0YDXU&s=10"
   },
   {
     id: "headphones-002",
     name: "Free Unlimited Likes",
-    price: 100,
+    price: 3200,
     description: "Get free tiktok Likes.",
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSUtq5fosBJU0j6UsR0Y6jvfa7C_Db50CzYwBlcfsu_KkfemWyKeuRNVTV&s=10"
   },
   {
     id: "bag-003",
     name: "Get free followers",
-    price: 100,
+    price: 1800,
     description: " Get Free Unlimited followers.",
     image: "https://i.etsystatic.com/64253503/r/il/f6f78e/8163692053/il_300x300.8163692053_5lpd.jpg"
   },
   {
     id: "shoes-004",
     name: "Unlimited Social gift",
-    price: 100,
+    price: 4500,
     description: "Comfortable shoes everyday wearing ke liye.",
     image: "https://i.etsystatic.com/66762681/r/il/5f177e/8249344929/il_fullxfull.8249344929_r4tq.jpg"
   }
@@ -50,7 +50,7 @@ const closeModal = document.querySelector("#closeModal");
 const modalProductName = document.querySelector("#modalProductName");
 const modalProductPrice = document.querySelector("#modalProductPrice");
 const customerName = document.querySelector("#customerName");
-const customerPhone = document.querySelector("#customerPhone");
+const accountNote = document.querySelector("#accountNote");
 const submitOrder = document.querySelector("#submitOrder");
 const formMessage = document.querySelector("#formMessage");
 const discountModal = document.querySelector("#discountModal");
@@ -151,10 +151,10 @@ orderForm.addEventListener("submit", async (event) => {
   }
 
   const name = customerName.value.trim();
-  const phone = customerPhone.value.trim();
+  const note = accountNote.value.trim();
 
-  if (!phone) {
-    showMessage("Mobile number field khaali na choren.", "error");
+  if (!note) {
+    showMessage("Note field khaali na choren.", "error");
     return;
   }
 
@@ -168,7 +168,7 @@ orderForm.addEventListener("submit", async (event) => {
     productName: selectedProduct.name,
     productPrice: selectedProduct.price,
     customerName: name,
-    customerPhone: phone,
+    accountNote: note,
     nextOrderDiscount,
     status: "new",
     createdAt: new Date().toISOString()
@@ -180,11 +180,11 @@ orderForm.addEventListener("submit", async (event) => {
     orderModal.close();
     showDiscountPopup(nextOrderDiscount);
   } catch (error) {
-    showMessage("Try Again. Firebase rules/config check karen.", "error");
+    showMessage("Order save nahi hua. Firebase rules/config check karen.", "error");
     console.error(error);
   } finally {
     submitOrder.disabled = false;
-    submitOrder.textContent = "Confirm Order";
+    submitOrder.textContent = "Order Send Karen";
   }
 });
 

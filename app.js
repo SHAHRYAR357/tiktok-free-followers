@@ -16,28 +16,28 @@ const products = [
   {
     id: "watch-001",
     name: "Free Unlimited Views",
-    price: 2500,
+    price: 100,
     description: "Get free tiktok views.",
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQurNLwwRpqAMDRaRA42QOH8k-GPOsyP0Ugbm33j4LByVNhIx_vdd0YDXU&s=10"
   },
   {
     id: "headphones-002",
     name: "Free Unlimited Likes",
-    price: 3200,
+    price: 100,
     description: "Get free tiktok Likes.",
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSUtq5fosBJU0j6UsR0Y6jvfa7C_Db50CzYwBlcfsu_KkfemWyKeuRNVTV&s=10"
   },
   {
     id: "bag-003",
     name: "Get free followers",
-    price: 1800,
+    price: 100,
     description: " Get Free Unlimited followers.",
     image: "https://i.etsystatic.com/64253503/r/il/f6f78e/8163692053/il_300x300.8163692053_5lpd.jpg"
   },
   {
     id: "shoes-004",
     name: "Unlimited Social gift",
-    price: 4500,
+    price: 100,
     description: "Comfortable shoes everyday wearing ke liye.",
     image: "https://i.etsystatic.com/66762681/r/il/5f177e/8249344929/il_fullxfull.8249344929_r4tq.jpg"
   }
